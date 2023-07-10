@@ -6,6 +6,8 @@ const selectedCurrency = document.getElementById('currency');
 const result = document.getElementById('result');
 let valueConverted = 0;
 
+window.addEventListener('resize', valueConverted)
+
     function handleSubmit(e) {
         e.preventDefault();
 
@@ -39,6 +41,11 @@ let valueConverted = 0;
 
     function valueFormatter(locale, currency) {
         const value = valueConverted.toLocaleString(`${locale}`, {style: 'currency', currency: `${currency}`});
+        const minWidth = 550;
+
+        if (window.innerWidth < minWidth){
+            return ` ${value} `;
+        }
         return `<span>💵</span> ${value} <span>💵</span>`;
     }
 
