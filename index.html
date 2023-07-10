@@ -6,8 +6,58 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>$DevConverter</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Poppins:wght@500;600;700&display=swap"
+          rel="stylesheet">
 </head>
 <body>
+
+<header>
+    <h1>$DevConverter</h1>
+</header>
+
+<main>
+    <form id="form">
+        <section class="inputs-container">
+            <div class="form-group">
+                <label for="valure-real">Valor a ser convertido (R$)</label>
+                <input type="number"
+                placeholder="20,00"
+                id="valure-real"
+                name="value-real"
+                max="1000000">
+            </div>
+            <div class="form-group">
+                <label for="currency">Escolha a moeda</label>
+                <select id="currency">
+                    <option value="">Selecione...</option>
+                    <option value="eur">Euro</option>
+                    <option value="dol">Dólar</option>
+                </select>
+            </div>
+
+        </section>
+
+        <button type="submit">Converter</button>
+    </form>
+
+    <h2 id="result"></h2>
+</main>
+
+
+<footer>
+    <span>
+        &copy; $DevConverter, 2023. Todos os direitos reservados
+    </span>
+</footer>
+
 
 </body>
 </html>
